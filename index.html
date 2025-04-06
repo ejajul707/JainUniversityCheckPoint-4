@@ -15,29 +15,36 @@
       align-items: center;
       justify-content: center;
     }
+
     .auth-buttons {
       text-align: center;
     }
+
     .modal-content {
       background-color: #f9f9f9;
       color: #333;
       border-radius: 12px;
       padding: 20px;
     }
+
     .modal-header {
       border-bottom: none;
     }
+
     .form-control {
       border-radius: 8px;
     }
+
     .btn-primary {
       border-radius: 8px;
       background: #2575fc;
     }
+
     .form-footer {
       text-align: center;
       margin-top: 15px;
     }
+
     .form-footer a {
       text-decoration: none;
       color: #2575fc;
@@ -47,14 +54,12 @@
 </head>
 <body>
 
-  <!-- Home Page Buttons -->
   <div class="auth-buttons">
     <h1>Welcome to Auth System</h1>
     <button class="btn btn-light m-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
     <button class="btn btn-outline-light m-2" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
   </div>
 
-  <!-- Register Modal -->
   <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -70,7 +75,7 @@
             <input type="date" class="form-control mb-2" name="dob" required>
             <input type="email" class="form-control mb-2" name="email" placeholder="Email" required>
             <input type="password" class="form-control mb-2" name="password" placeholder="Password" required>
-            
+
             <div class="mb-2">
               <label class="form-label">Gender</label><br>
               <div class="form-check form-check-inline">
@@ -86,7 +91,7 @@
             <button type="submit" class="btn btn-primary w-100 mt-3">Register</button>
 
             <div class="form-footer">
-              Already have an account? 
+              Already have an account?
               <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
             </div>
 
@@ -96,7 +101,6 @@
     </div>
   </div>
 
-  <!-- Login Modal -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -112,7 +116,7 @@
             <button type="submit" class="btn btn-primary w-100">Login</button>
 
             <div class="form-footer">
-              Don't have an account? 
+              Don't have an account?
               <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a>
             </div>
 
@@ -122,10 +126,8 @@
     </div>
   </div>
 
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Registration Form Validation
     document.getElementById("registerForm").addEventListener("submit", function (e) {
       const contact = document.querySelector("[name='contact']").value;
       if (contact.length !== 10 || !/^\d+$/.test(contact)) {
@@ -134,16 +136,24 @@
       }
     });
 
-    // Login Form Validation
     document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault(); 
+
       const email = document.querySelector("#loginForm [name='email']").value;
       const password = document.querySelector("#loginForm [name='password']").value;
 
       if (!email || !password) {
         alert("Both fields are required.");
-        e.preventDefault();
+        return;
+      }
+
+      if (email === "ejajul707@gmail.com" && password === "CheckPoint4") {
+        window.location.href = "sample.html"; 
+      } else {
+        alert("Invalid email or password.");
       }
     });
   </script>
+
 </body>
 </html>

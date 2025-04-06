@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourTrip.com - Travel Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+    <header>YourTrip.com - Explore the World</header>
+    <section class="booking">
+        <div class="container">
+            <div class="left">
+                <img src="hero-img.webp" alt="Company Brand">
+            </div>
+            <div class="right">
+                <h2>Book Your Trip</h2>
+                <form id="bookingForm">
+                    <label>Where to:</label>
+                    <select id="destination">
+                        <option value="">Select Destination</option>
+                        <option value="paris">Paris</option>
+                        <option value="bali">Bali</option>
+                        <option value="newyork">New York</option>
+                        <option value="dubai">Dubai</option>
+                        <option value="tokyo">Tokyo</option>
+                        <option value="sydney">Sydney</option>
+                        <option value="rome">Rome</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="london">London</option>
+                    </select>
+
+                    <label>How Many Persons:</label>
+                    <input type="number" id="persons" min="1">
+                    <label>Start Date:</label>
+                    <input type="date" id="startDate">
+                    <label>End Date:</label>
+                    <input type="date" id="endDate">
+                    <label>Description:</label>
+                    <textarea id="description" minlength="50" maxlength="500"></textarea>
+                    <button type="button" onclick="validateForm()">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="package-gallery">
+        <h2>Explore Our Packages</h2>
+        <div class="package-container">
+            <div class="package">
+                <img src="paris.webp" alt="Paris">
+                <h3>Paris</h3>
+                <p>Experience the beauty of Eiffel Tower & Louvre Museum.</p>
+                <p class="price">$1200</p>
+                <p class="rating">⭐ 4.8</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="bali.webp" alt="Bali">
+                <h3>Bali</h3>
+                <p>Enjoy the tropical paradise and exotic beaches.</p>
+                <p class="price">$900</p>
+                <p class="rating">⭐ 4.7</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="newyork.webp" alt="New York">
+                <h3>New York</h3>
+                <p>Visit Times Square, Central Park & the Statue of Liberty.</p>
+                <p class="price">$1500</p>
+                <p class="rating">⭐ 4.9</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="dubai.webp" alt="Dubai">
+                <h3>Dubai</h3>
+                <p>Experience luxury, Burj Khalifa, and desert safaris.</p>
+                <p class="price">$1100</p>
+                <p class="rating">⭐ 4.8</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="tokyo.webp" alt="Tokyo">
+                <h3>Tokyo</h3>
+                <p>Explore high-tech cityscapes and traditional temples.</p>
+                <p class="price">$1300</p>
+                <p class="rating">⭐ 4.9</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="sydney.webp" alt="Sydney">
+                <h3>Sydney</h3>
+                <p>Visit the Opera House and enjoy scenic beaches.</p>
+                <p class="price">$1400</p>
+                <p class="rating">⭐ 4.7</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="rome.webp" alt="Rome">
+                <h3>Rome</h3>
+                <p>Walk through ancient history and stunning architecture.</p>
+                <p class="price">$1250</p>
+                <p class="rating">⭐ 4.8</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="maldives.webp" alt="Maldives">
+                <h3>Maldives</h3>
+                <p>Relax in crystal-clear waters and overwater bungalows.</p>
+                <p class="price">$1600</p>
+                <p class="rating">⭐ 4.9</p>
+                <button>Book Now</button>
+            </div>
+            <div class="package">
+                <img src="london.webp" alt="London">
+                <h3>London</h3>
+                <p>Discover history, royalty, and modern city life.</p>
+                <p class="price">$1350</p>
+                <p class="rating">⭐ 4.7</p>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-list">
+            <div class="service">Affordable Hotels</div>
+            <div class="service">Food & Drinks</div>
+            <div class="service">Safety Guide</div>
+            <div class="service">Travel Insurance</div>
+            <div class="service">24/7 Support</div>
+            <div class="service">Luxury Transport</div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="img1.webp" alt="Gallery Image 1">
+            <img src="img2.webp" alt="Gallery Image 2">
+            <img src="img3.webp" alt="Gallery Image 3">
+            <img src="img4.webp" alt="Gallery Image 4">
+            <img src="img5.webp" alt="Gallery Image 5">
+            <img src="img6.webp" alt="Gallery Image 6">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="left">
+            <img src="hero-img.webp" alt="Company Image">
+        </div>
+        <div class="right">
+            <h2>About Us</h2>
+            <p>Welcome to YourTrip.com, your one-stop destination for all your travel needs. Established in 2010, we have been making travel dreams come true for over a decade.</p>
+            <p>Our services include affordable hotels, guided tours, luxury transport, and 24/7 customer support to make your journey seamless and memorable.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>© 2025 YourTrip.com - All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+   
+
+</body>
+</html>
